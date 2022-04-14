@@ -1,0 +1,41 @@
+
+<div class="abc">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1 style="color: white;" >Login</h1>
+          <h6 style="color:white" >Please Enter Email and Password</h6>
+        </div>
+          <form [formGroup]="loginform" (ngSubmit)="login()">
+            <div  class="form-group-mb-3">
+              <label for="emailid" style=" color: white;">Email ID</label>
+              <input type="email" class="form-control" id="emailid" formControlName="myemail">
+              <div *ngIf="myemail.invalid && myemail.touched">
+                <small style="color:red" *ngIf="myemail.errors.required">*EMAIL IS REQUIRED</small>
+                <small style="color:red" *ngIf="myemail.errors.email">*EMAIL SHOULD BE VALID</small>
+        </div>
+             
+            </div>
+            <div class="form-group-mb-3">
+              <label for="pwd" style=" color: white;" >Password</label>
+              <input type="password" class="form-control" id="pwd" formControlName="pwd">
+             <div *ngIf="pwd.invalid && pwd.touched">
+                     <small style="color:red" *ngIf="pwd.errors.required">*PASSWORD IS REQUIRED</small>
+                     <small style="color:red" *ngIf="pwd.errors.minlength">*PASSWORD SHOULD BE MINIMUM 8 CHARACTERS</small>
+             </div> 
+            </div>
+           <div class="text-center"><br/>
+            <button type="submit" class="bg-success" routerLink="dashboard"   style="color: #ffff ; size: 50px;">Login</button>
+            <router-outlet></router-outlet>
+           
+          </div>
+          <br> 
+          </form>
+       <br>
+      </div>
+  
+  </div>
+</div>
+</div>

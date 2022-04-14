@@ -1,0 +1,51 @@
+<div class="abc">
+<div class="container">
+  <div class="panel panel-primary" >
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/><br/><br/><br/><br/>
+    <div class="xyz">
+
+    <h2 style="text-align: center;background-color:bisque;color:black;">Debit</h2>
+    
+    <div class="panel-body" >
+      <form [formGroup]="aform" (ngSubmit)="login()">
+  
+        <div class="form-group">
+          <label for="accnum">ACCOUNT NUMBER</label>
+          <input type="text" class="form-control" id="accnum" formControlName="accnum">
+          <div *ngIf = "accnum.touched && accnum.invalid">
+            <small style="color:red" *ngIf="accnum.errors.required">ACCOUNT NUMBER IS REQUIRED</small>
+            <small style="color:red" *ngIf="accnum.errors.minLength">MINIMUM 12 CHARACTERS ARE REQUIRED</small>
+
+          </div>
+          
+        </div>
+      <br>
+        <div class="form-group">
+          <label for="money">AMOUNT</label>
+          <input type="text" class="form-control" id="money" formControlName="money">
+          <small style="color:red" *ngIf="money.invalid && money.touched">*AMOUNT IS REQUIRED</small> 
+        </div>
+      <br>
+            
+     <div class="text-center">
+        <button class="btn btn-primary" [disabled]="aform.invalid" (click)="display()">Submit</button></div>
+        <h3>{{msg}}</h3>
+        <h3>{{bmsg}}</h3>
+        <h3>{{bal}}</h3>
+      </form>
+    </div>
+  </div>
+
+    </div>
+    <br/>
+    
+  </div>
+</div>
+
+
+
+ 

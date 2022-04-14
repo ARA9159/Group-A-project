@@ -1,0 +1,26 @@
+div.container{
+    width:100%
+ 
+ }
+ 
+ 
+ div.panel.panel-primary{
+     
+     display:inline-block;
+     width:50%;
+     padding-right:30px;
+     padding-top:2%;
+     }
+     
+     div.secondary-panel{
+         display:inline-block;
+         width:50%;
+         position:absolute;
+         padding-left:30px;
+         padding-top:2%;
+     }
+     div.header h2{ 
+        background-color: #fff;
+        color:#fff;
+        text-align: center;
+    }

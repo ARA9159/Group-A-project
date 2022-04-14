@@ -1,0 +1,26 @@
+.container{
+    margin-left:450px;
+    margin-top: 50px;
+}
+.card{
+    margin-top: 150px;
+    background-color:rgb(148, 104, 161);
+    max-width: 500px;
+    width: 100%;
+    margin-left: 50px;
+    padding: 25px 30px;
+    border-radius: 25px;
+    background: linear-gradient(135deg,#be1b1bca,#161baa);
+}
+.abc{
+    background-size: cover;
+    margin-top: -50px;
+    height: 850px;
+    background-image: url("https://www.bengrewell.com/content/images/2017/10/o-ENCRYPTION-facebook.jpg");
+}
+.bg-success{
+    width: 200px!important;
+    padding: 5px;
+     min-width: unset!important;
+}
+ 

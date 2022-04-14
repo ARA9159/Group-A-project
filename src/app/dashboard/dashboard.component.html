@@ -1,0 +1,23 @@
+<nav>
+  <div class="nav nav-tabs" style="background-color:blueviolet;" id="nav-tab" role="tablist">
+    <button class="nav-link active" style="color:black;" id="nav-credit-tab" data-bs-toggle="tab" data-bs-target="#nav-credit" type="button" role="tab" aria-controls="nav-credit" aria-selected="true">Credit</button>
+    <button class="nav-link" style="color:black;" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Debit Card</button>
+    <button class="nav-link" style="color:black;" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Account Holder Details</button>
+    <button class="nav-link" style="margin-left: 1000px; color:black;" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-logout" type="button" role="tab" aria-controls="nav-logout" aria-selected="false" >LOGOUT</button>
+    
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-credit" role="tabpanel" aria-labelledby="nav-credit-tab" >
+    <app-credit></app-credit>
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <app-apply-for-atm></app-apply-for-atm>
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <app-account-holder-details></app-account-holder-details>
+  </div>
+  <div class="tab-pane fade" id="nav-logout" role="tabpanel" aria-labelledby="nav-logout-tab">
+    <app-logout></app-logout>
+  </div>
+</div>

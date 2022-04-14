@@ -1,0 +1,45 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="abc">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1 style="color:white;" >APPLY FOR CREDIT CARD</h1>
+            
+          </div>
+            <form [formGroup]="creditform" (ngSubmit)="create()">
+              <div  class="form-group-mb-3">
+                <label for="acnum" style=" color: white;"> ACCOUNT NUMBER</label>
+                <input placeholder="Enter account number" type="acnum" class="form-control" id="acnum" formControlName="acnum">
+                <div *ngIf="acnum.invalid && acnum.touched">
+                  <br>
+                  <small style="color:rgb(9, 168, 9)" *ngIf="acnum.errors.required">*ACCOUNT NUMBER IS REQUIRED</small>
+                 
+          </div>
+               
+              </div>
+              <br>
+              <div class="form-group-mb-3">
+                <label for="cnum" style=" color: rgb(235, 240, 235);"  >ANNUAL INCOME</label>
+                <input placeholder="Enter annual income" type="cnum" class="form-control" id="cnum" formControlName="cnum">
+               <div *ngIf="cnum.invalid && cnum.touched">
+                       <small style="color:rgb(55, 154, 8)" *ngIf="cnum.errors.required">*ANNUAL INCOME IS REQUIRED</small>
+                       
+               </div> 
+              </div>
+              <br>
+             <div class="text-center"><br/>
+              
+              <button type="submit" class="bg-success"  [disabled]="creditform.valid" style="color:white; size: 50px;">APPLY</button>
+              <router-outlet></router-outlet>
+             
+            </div>
+            <br> 
+            </form>
+         <br>
+        </div>
+    
+    </div>
+  </div>
+</div>

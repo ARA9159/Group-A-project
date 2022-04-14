@@ -1,0 +1,47 @@
+<div class="header"><h2><img src="https://sbi.co.in/o/SBI-Theme/images/custom/logo.png"></h2></div>
+<hr/>
+<div class="container">
+  <div class="panel panel-primary" >
+    <h2 style="text-align: center;background-color:ghostwhite;color:black;">Apply your card here</h2>
+    <br/>
+    <div class="panel-body">
+      <form [formGroup]="aform" (ngSubmit)="login()">
+        <div class="form-group">
+          <label for="Nameonyourcard"><b>Name on your card</b></label>
+          <input type="text" class="form-control" id="Nameonyourcard" formControlName="Nameonyourcard">
+          <small style="color:red" *ngIf="Nameonyourcard.invalid && Nameonyourcard.touched">*NAME IS REQUIRED(no numericals are allowed)</small>
+        </div>
+        <br>
+  
+        <div class="form-group">
+          <label for="Accountnumber"><b>Account Number</b></label>
+          <input type="text" class="form-control" id="Accountnumber" formControlName="Accountnumber">
+          <small style="color:red" *ngIf="Accountnumber.invalid && Accountnumber.touched">*ACCOUNT NUMBER MINIMUM 12 DIGITS ARE REQUIRED</small>
+        </div>
+       <br>
+        <div class="form-group">
+          <label for="mobilenumber"><b>Mobile Number</b></label>
+          <input type="text" class="form-control" id="mobilenumber" formControlName="mobilenumber">
+          <small style="color:red" *ngIf="mobilenumber.invalid && mobilenumber.touched">*MOBILE NUMBER MINIMUM 10 DIGITS IS REQUIRED</small> 
+        </div>
+       <br>
+            
+       <div class="text-center">
+        <button class="btn btn-primary" [disabled]="aform.invalid" >Apply</button></div>
+      
+      </form>
+
+    </div>
+    <br/>
+    
+  </div>
+  <div class="secondary-panel">
+    <img src="../assets/card.jpg">
+    <h4>Use of SBI My Card International Debit Card</h4>
+    <ul>
+      <li class="cont-text-li">For shopping at over 6 Lakh merchant outlets in India, and over 30 million worldwide.</li>
+      <li class="cont-text-li">For booking movie tickets, bill payments, travel and other online purchases and payments over the internet.</li>
+      <li class="cont-text-li">For withdrawing cash from SBI ATMs or other ATMs in India and worldwide (ATMs with MasterCard/Maestro/Visa logo).</li>
+    </ul>
+  </div>
+</div>

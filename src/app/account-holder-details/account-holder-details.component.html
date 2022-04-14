@@ -1,0 +1,73 @@
+<div class="abc">
+  <div class="container">
+    <div class="panel panel-primary" >
+      
+    <div class="xyz">
+      <h2 style="text-align: center;background-color: rebeccapurple;color:blanchedalmond;">ACCOUNT HOLDER DETAILS</h2>
+      
+      
+      <div class="panel-body">
+        <form [formGroup]="aform" (ngSubmit)="login()">
+    
+          <div class="form-group">
+            <label for="accname">Account Number</label>
+            <input placeholder="Enter Account Number" type="text" class="form-control" id="accname" formControlName="accname">
+            <small style="color:red" *ngIf="accname.invalid && accname.touched">*ACCOUNT NUMBER IS REQUIRED</small>
+          </div>
+          <br>
+              
+          <div class="text-center">
+             <button class="btn btn-primary" [disabled]="aform.invalid">SUBMIT</button> </div>
+            
+            </form>
+     
+         </div>
+        <br/>
+         <div class="panel-footer">
+          <div class="alert alert-primary" role="alert">
+          </div>
+          </div>
+            </div> 
+          </div>  
+        </div>
+           <hr/>    
+
+  
+  
+  <table border="1" width="100%">
+    <tr>
+      <td>ACCOUNT NUMBER</td>
+      <td>ACCOUNT TYPE</td>
+      <td>FIRST NAME</td>
+      <td>LAST NAME</td>
+      <td>GENDER</td>
+      <td>AGE</td>
+      <td>DOB</td>
+      <td>CONTACT NUMBER</td>
+      <td>AADHAR NUMBER</td>
+      <td>EMAIL ID</td>
+      <td>NEW PASSWORD</td>
+      <td>CONFORM PASSWORD</td>
+      <td>ADDRESS</td>
+      <td>PLACE</td>
+      <td>PIN CODE</td>
+    </tr>
+    <tr *ngFor="let post of posts">
+      <td>{{post.accountnum}}</td>
+      <td>{{post.type}}</td>
+      <td>{{post.fname}}</td>
+      <td>{{post.lname}}</td>
+      <td>{{post.gname</td>
+      <td>{{post.age}}</td>
+      <td>{{post.dob}}</td>
+      <td>{{post.cnum}}</td>
+      <td>{{post.anum}}</td>
+      <td>{{post.eid}}</td>
+      <td>{{post.npsw}}</td>
+      <td>{{post.cpsw}}</td>
+      <td>{{post.adres}}</td>
+      <td>{{post.place}}</td>
+      <td>{{post.code}}</td>
+    </tr>
+    </table>  
+    <router-outlet></router-outlet>
